@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Reinier van der Windt
+  description: An Ansible Python Role
+  license: BSD
+  min_ansible_version: 1.2
+  role_name: python
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - python
+
+dependencies: []

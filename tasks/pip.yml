@@ -1,0 +1,14 @@
+---
+
+- name: "Download get-pip.py"
+  get_url:
+    url: "https://bootstrap.pypa.io/get-pip.py"
+    dest: "/tmp"
+
+- name: "Install pip"
+  command: "python{{ python_version }} /tmp/get-pip.py"
+
+- name: "Delete get-pip.py"
+  file:
+    state: absent
+    path: "/tmp/get-pip.py"
