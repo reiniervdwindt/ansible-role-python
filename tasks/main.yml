@@ -18,6 +18,8 @@
   ignore_errors: true
   register: pip_is_installed
   changed_when: false
+  environment:
+    PATH: "{{ ansible_env.PATH }}:{{ ansible_user_dir }}/.local/bin"
 
 - name: "Install pip"
   include_tasks: "pip.yml"
